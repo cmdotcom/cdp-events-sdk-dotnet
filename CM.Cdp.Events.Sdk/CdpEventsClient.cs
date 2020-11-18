@@ -12,7 +12,7 @@ namespace CM.Cdp.Events.Sdk
     /// This clients provides all options to send new events into the CDP Environment.
     /// </summary>
     [PublicAPI]
-    public class CdpEventsClient : BaseClient
+    public class CdpEventsClient : BaseClient, ICdpEventsClient
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CdpEventsClient" /> class.
@@ -29,11 +29,11 @@ namespace CM.Cdp.Events.Sdk
         /// <param name="events">List of events you wish to add.</param>
         /// <param name="cancellationToken">An optional cancellation token to abort this request.</param>
         /// <returns></returns>
-        public async Task AddAuthenticatedEvents(Guid tenantId, IEnumerable<ApiEvent> events, CancellationToken cancellationToken = default)
+        public async Task AddEvents(Guid tenantId, IEnumerable<ApiEvent> events, CancellationToken cancellationToken = default)
             => await Post($"/events/v1.0/tenants/{tenantId}/events", events, cancellationToken);
 
         /// <summary>
-        /// Add new whitelisted events. Events that have been whitelisted do not need an ApiKey for authentication.
+        /// Add new whitelisted events. All events should have been whitelisted, and do not need an ApiKey for authentication.
         /// </summary>
         /// <param name="tenantId">Your Tenant Id, used for identification. (Found in your CDP app under "settings")</param>
         /// <param name="events">List of events you wish to add.</param>
