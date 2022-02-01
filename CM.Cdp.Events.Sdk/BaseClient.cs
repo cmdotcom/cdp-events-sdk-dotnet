@@ -18,12 +18,17 @@ namespace CM.Cdp.Events.Sdk
         private readonly HttpClient _httpClient;
         private readonly Guid? _apiKey;
         private readonly string _baseUrl;
+        private readonly JsonSerializerSettings _jsonSerializerSettings;
 
         public BaseClient(HttpClient httpClient, Guid? apiKey, string baseUrl)
         {
             _httpClient = httpClient;
             _apiKey = apiKey;
             _baseUrl = baseUrl;
+            _jsonSerializerSettings = new JsonSerializerSettings
+            {
+                NullValueHandling = NullValueHandling.Ignore
+            };
         }
 
         /// <summary>
@@ -42,7 +47,7 @@ namespace CM.Cdp.Events.Sdk
 
             using var request = new HttpRequestMessage(HttpMethod.Post, $"{_baseUrl}{url}")
             {
-                Content = new StringContent(JsonConvert.SerializeObject(data), encoding, jsonMediaType)
+                Content = new StringContent(JsonConvert.SerializeObject(data, _jsonSerializerSettings), encoding, jsonMediaType)
             };
             request.Headers.Add(apiKeyHeader, _apiKey.Value.ToString());
 
@@ -61,7 +66,7 @@ namespace CM.Cdp.Events.Sdk
         {
             using var request = new HttpRequestMessage(HttpMethod.Post, $"{_baseUrl}{url}")
             {
-                Content = new StringContent(JsonConvert.SerializeObject(data), encoding, jsonMediaType)
+                Content = new StringContent(JsonConvert.SerializeObject(data, _jsonSerializerSettings), encoding, jsonMediaType)
             };
 
             var response = await _httpClient.SendAsync(request, cancellationToken).ConfigureAwait(false);
