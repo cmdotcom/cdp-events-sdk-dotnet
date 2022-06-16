@@ -1,5 +1,5 @@
 # CDP EventsAPI SDK
-.NET Standard SDK to send email with the CM CDP Events API
+.NET Standard SDK to send events with the CM CDP Events API
 
 ## API Documentation
 https://docs.cmtelecom.com/en/api/cdp-events/

@@ -3,12 +3,12 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <Authors>CM Cdp Events</Authors>
-    <Version>1.0.1</Version>
+    <Version>1.0.1.1</Version>
     <Description>SDK for use with the CM CDP Events API.</Description>
     <PackageProjectUrl>https://github.com/cmdotcom/cdp-events-sdk-dotnet</PackageProjectUrl>
     <Company>CM.com</Company>
     <PackageIconUrl>http://cdn.cmtelecom.com/images/cm-nuget.png</PackageIconUrl>
-    <RepositoryUrl>https://https://github.com/cmdotcom/cdp-events-sdk-dotnet</RepositoryUrl>
+    <RepositoryUrl>https://github.com/cmdotcom/cdp-events-sdk-dotnet</RepositoryUrl>
     <RepositoryType>GitHub</RepositoryType>
     <PackageTags>CM, CDP, Events, MMC, API, SDK</PackageTags>
     <Copyright>2022 CM.com</Copyright>
