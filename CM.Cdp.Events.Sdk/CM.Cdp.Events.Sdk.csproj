@@ -5,7 +5,7 @@
     <Authors>CM Cdp Events</Authors>
     <Version>1.0.1</Version>
     <Description>SDK for use with the CM CDP Events API.</Description>
-    <PackageProjectUrl>https://https://github.com/cmdotcom/cdp-events-sdk-dotnet</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/cmdotcom/cdp-events-sdk-dotnet</PackageProjectUrl>
     <Company>CM.com</Company>
     <PackageIconUrl>http://cdn.cmtelecom.com/images/cm-nuget.png</PackageIconUrl>
     <RepositoryUrl>https://https://github.com/cmdotcom/cdp-events-sdk-dotnet</RepositoryUrl>
