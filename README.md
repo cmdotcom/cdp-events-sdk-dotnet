@@ -2,7 +2,7 @@
 .NET Standard SDK to send events with the CM CDP Events API
 
 ## API Documentation
-https://docs.cmtelecom.com/en/api/cdp-events/
+[https://developers.cm.com/mobile-marketing-cloud/docs/introduction](https://developers.cm.com/mobile-marketing-cloud/docs/introduction)
 
 # Usage
 
