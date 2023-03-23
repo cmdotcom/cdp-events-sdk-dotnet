@@ -20,7 +20,7 @@ namespace CM.Cdp.Events.Sdk
         /// <param name="httpClient">The HttpClient used for sending communicating with CDP. Generally, you should use only one version within your application.</param>
         /// <param name="apiKey">Your Product token, used for authentication. (Found in your CDP app under "settings", optional)</param>
         /// <param name="baseUrl">The base URL of the CM CDP API (Optional)</param>
-        public CdpEventsClient(HttpClient httpClient, Guid? apiKey, string baseUrl = "https://api.cm.com") : base(httpClient, apiKey, baseUrl) { }
+        public CdpEventsClient(HttpClient httpClient, Guid? apiKey, string baseUrl = "https://api.cdp.cm.com") : base(httpClient, apiKey, baseUrl) { }
 
         /// <summary>
         /// Add new events

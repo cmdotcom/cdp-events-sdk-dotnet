@@ -17,7 +17,7 @@ CdpEventsClient eventsClient = new CdpEventsClient(httpClient, myApiKey);
 
 `myApiKey` is your unique api key (or product token) which authorizes you on the CM platform. Always keep this key secret!
 
-`baseUrl` is optional and will be defaulted to https://api.cm.com when not filled in. Else the requests will be send to the filled in domain.
+`baseUrl` is optional and will be defaulted to https://api.cdp.cm.com when not filled in. Else the requests will be send to the filled in domain.
 
 ## Send an event
 
